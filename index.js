@@ -8,8 +8,10 @@ module.exports = (opts = { baseValue: 16 }) => {
     postcssPlugin: 'postcss-rem-to-px',
     Declaration (decl) {
       const unit = 'px'
-      decl.value = decl.value.replace(/"[^"]+"|'[^']+'|url\([^)]+\)|(-?\d*\.?\d+)rem/g, (_a, b) => {
-        return `${b * opts.baseValue}${b == 0 ? '' : unit}`
+      decl.value = decl.value.replace(/"[^"]+"|'[^']+'|url\([^)]+\)|(-?\d*\.?\d+)rem/g, (match, p1) => {
+        if (p1 === undefined) return match
+
+        return `${p1 * opts.baseValue}${p1 == 0 ? '' : unit}`
       })
     }
   }
