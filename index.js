@@ -1,30 +1,17 @@
 /**
  * @type {import('postcss').PluginCreator}
  */
-module.exports = (opts = {}) => {
+module.exports = (opts = { baseValue: 16 }) => {
   // Work with options here
 
   return {
     postcssPlugin: 'postcss-rem-to-px',
-    /*
-    Root (root, postcss) {
-      // Transform CSS AST here
+    Declaration (decl) {
+      const unit = 'px'
+      decl.value = decl.value.replace(/"[^"]+"|'[^']+'|url\([^)]+\)|(-?\d*\.?\d+)rem/g, (_a, b) => {
+        return `${b * opts.baseValue}${b == 0 ? '' : unit}`
+      })
     }
-    */
-
-    /*
-    Declaration (decl, postcss) {
-      // The faster way to find Declaration node
-    }
-    */
-
-    /*
-    Declaration: {
-      color: (decl, postcss) {
-        // The fastest way find Declaration node if you know property name
-      }
-    }
-    */
   }
 }
 

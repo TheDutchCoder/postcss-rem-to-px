@@ -1,18 +1,18 @@
 # postcss-rem-to-px
 
-[PostCSS] plugin test.
+[PostCSS] plugin to convert `rem` values to `px` values.
 
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
 .foo {
-  /* Input example */
+  margin: 2rem;
 }
 ```
 
 ```css
 .foo {
-  /* Output example */
+  margin: 32px;
 }
 ```
 
@@ -24,7 +24,7 @@
 npm install --save-dev postcss postcss-rem-to-px
 ```
 
-**Step 2:** Check you project for existed PostCSS config: `postcss.config.js`
+**Step 2:** Check you project for an existing PostCSS config: `postcss.config.js`
 in the project root, `"postcss"` section in `package.json`
 or `postcss` in bundle config.
 
@@ -37,6 +37,19 @@ and set this plugin in settings.
 module.exports = {
   plugins: [
 +   require('postcss-rem-to-px'),
+    require('autoprefixer')
+  ]
+}
+```
+
+## Options
+
+You can set a `baseValue` to represent the body's root pixel value for `font-size`, which is the base for `rem` values. The default `baseValue` is 16.
+
+```diff
+module.exports = {
+  plugins: [
++   require('postcss-rem-to-px', { baseValue: 10 }),
     require('autoprefixer')
   ]
 }

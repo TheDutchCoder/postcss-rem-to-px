@@ -4,7 +4,8 @@
   "description": "PostCSS plugin test",
   "keywords": ["postcss", "css", "postcss-plugin", "postcss-rem-to-px"],
   "scripts": {
-    "test": "jest --coverage && eslint ."
+    "test": "jest --coverage && eslint .",
+    "test:watch": "jest --watch --coverage && eslint ."
   },
   "author": "Reinier Kaper <rp.kaper+github@gmail.com>",
   "license": "MIT",
