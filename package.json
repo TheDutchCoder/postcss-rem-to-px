@@ -1,5 +1,5 @@
 {
-  "name": "postcss-rem-to-px",
+  "name": "@thedutchcoder/postcss-rem-to-px",
   "version": "0.0.0",
   "description": "PostCSS plugin test",
   "keywords": ["postcss", "css", "postcss-plugin", "postcss-rem-to-px"],
@@ -9,7 +9,7 @@
   },
   "author": "Reinier Kaper <rp.kaper+github@gmail.com>",
   "license": "MIT",
-  "repository": "test/postcss-rem-to-px",
+  "repository": "https://github.com/TheDutchCoder/postcss-rem-to-px",
   "engines": {
     "node": ">=12.0.0"
   },
