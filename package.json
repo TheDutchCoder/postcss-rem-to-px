@@ -1,7 +1,7 @@
 {
   "name": "@thedutchcoder/postcss-rem-to-px",
-  "version": "0.0.0",
-  "description": "PostCSS plugin test",
+  "version": "0.0.1",
+  "description": "PostCSS plugin to convert rem values to px values",
   "keywords": ["postcss", "css", "postcss-plugin", "postcss-rem-to-px"],
   "scripts": {
     "test": "jest --coverage && eslint .",
