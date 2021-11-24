@@ -36,7 +36,7 @@ and set this plugin in settings.
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-rem-to-px'),
++   require('@thedutchcoder/postcss-rem-to-px'),
     require('autoprefixer')
   ]
 }
@@ -49,7 +49,7 @@ You can set a `baseValue` to represent the body's root pixel value for `font-siz
 ```diff
 module.exports = {
   plugins: [
-+   require('postcss-rem-to-px', { baseValue: 10 }),
++   require('@thedutchcoder/postcss-rem-to-px', { baseValue: 10 }),
     require('autoprefixer')
   ]
 }
