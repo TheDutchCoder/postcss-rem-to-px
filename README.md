@@ -21,7 +21,7 @@
 **Step 1:** Install plugin:
 
 ```sh
-npm install --save-dev postcss postcss-rem-to-px
+npm install --save-dev postcss @thedutchcoder/postcss-rem-to-px
 ```
 
 **Step 2:** Check you project for an existing PostCSS config: `postcss.config.js`
